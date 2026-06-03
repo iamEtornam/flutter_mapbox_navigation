@@ -1,8 +1,10 @@
-[![Pub][pub_badge]][pub] [![BuyMeACoffee][buy_me_a_coffee_badge]][buy_me_a_coffee]
+[![License: Apache 2.0][license_badge]][license]
 
 # flutter_mapbox_navigation
 
 Add Turn By Turn Navigation to Your Flutter Application Using MapBox. Never leave your app when you need to navigate your users to a location.
+
+> Maintained by **[Bright Etornam Sunu](https://etornam.dev)**. Originally created by Emmanuel Oche and migrated to the **Mapbox Navigation SDK v3** (Android & iOS).
 
 ## Features
 
@@ -243,8 +245,12 @@ Add the following to your `info.plist` file
 * [DONE] Embeddable Navigation View 
 * Offline Routing
 
+## License
+
+Licensed under the **Apache License 2.0** — see [LICENSE](LICENSE) and [NOTICE](NOTICE).
+Originally created by Emmanuel Oche (Copyright 2020); the Mapbox Navigation SDK v3
+migration and ongoing maintenance are by Bright Etornam Sunu (Copyright 2026).
+
 <!-- Links -->
-[pub_badge]: https://img.shields.io/pub/v/flutter_mapbox_navigation.svg
-[pub]: https://pub.dev/packages/flutter_mapbox_navigation
-[buy_me_a_coffee]: https://www.buymeacoffee.com/eopeter
-[buy_me_a_coffee_badge]: https://img.buymeacoffee.com/button-api/?text=Donate&emoji=&slug=eopeter&button_colour=29b6f6&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00
+[license_badge]: https://img.shields.io/badge/license-Apache%202.0-blue.svg
+[license]: https://github.com/iamEtornam/flutter_mapbox_navigation/blob/master/LICENSE
