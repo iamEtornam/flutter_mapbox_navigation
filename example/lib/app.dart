@@ -141,8 +141,8 @@ class _SampleNavigationAppState extends State<SampleNavigationApp> {
                             opt.simulateRoute = true;
                             opt.voiceInstructionsEnabled = true;
                             opt.bannerInstructionsEnabled = true;
-                            opt.units = VoiceUnits.metric;
-                            opt.language = "de-DE";
+                            opt.units = VoiceUnits.imperial;
+                            opt.language = "en";
                             await MapBoxNavigation.instance
                                 .startNavigation(wayPoints: wayPoints, options: opt);
                           },

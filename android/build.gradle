@@ -1,9 +1,9 @@
-group 'com.eopeter.fluttermapboxnavigation'
+group 'dev.etornam.mapboxnavigation'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.10'
-    ext.android_gradle_version = '7.4.2'
+    ext.kotlin_version = '1.9.24'
+    ext.android_gradle_version = '8.6.0'
     repositories {
         google()
         mavenCentral()
@@ -25,7 +25,6 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$android_gradle_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "com.mapbox.gradle.plugins:access-token:0.4.0"
     }
 }
 
@@ -54,15 +53,16 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace 'com.eopeter.fluttermapboxnavigation'
-    compileSdkVersion 33
+    namespace 'dev.etornam.mapboxnavigation'
+    // Maps SDK v11 (pulled by Navigation SDK v3) requires compileSdk 34.
+    compileSdkVersion 34
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 33
+        targetSdkVersion 34
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -73,12 +73,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 
     buildFeatures{
@@ -87,10 +87,13 @@ android {
 }
 
 dependencies {
-    // Mapbox Navigation SDK
-    implementation "com.mapbox.navigation:copilot:2.16.0"
-    implementation "com.mapbox.navigation:ui-app:2.16.0"
-    implementation "com.mapbox.navigation:ui-dropin:2.16.0"
+    // Mapbox Navigation SDK v3. The umbrella `android` artifact pulls the core +
+    // ui-maps + tripdata + voice + Maps SDK v11, but the Android view widgets live
+    // in `ui-components`, which must be added explicitly.
+    // The `-ndk27` variants ship native libraries aligned for 16 KB memory page
+    // sizes (required for Android 15+ devices using 16 KB pages).
+    implementation "com.mapbox.navigationcore:android-ndk27:3.23.1"
+    implementation "com.mapbox.navigationcore:ui-components-ndk27:3.23.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.jakewharton.timber:timber:4.7.1'
     implementation 'com.google.code.gson:gson:2.8.9'

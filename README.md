@@ -13,6 +13,19 @@ Add Turn By Turn Navigation to Your Flutter Application Using MapBox. Never leav
 * Natural-sounding turn instructions powered by [Amazon Polly](https://aws.amazon.com/polly/) (no configuration needed)
 * [Support for over two dozen languages](https://docs.mapbox.com/ios/navigation/overview/localization-and-internationalization/)
 
+## Requirements
+
+This version uses **Mapbox Navigation SDK v3**. Minimum platform requirements:
+* **iOS:** deployment target 14.0+, Xcode 15+, Swift 5.9+.
+* **Android:** AGP 8.6+, Gradle 8.7+, JDK 17, `compileSdk`/`targetSdk` 34, `minSdk` 21, NDK 23, Kotlin 1.9+, Mapbox Maps SDK v11.
+
+> **iOS requires Swift Package Manager.** Mapbox no longer ships the iOS Navigation SDK v3 via CocoaPods, so this plugin is distributed as a Swift Package. Enable Flutter's SPM support once in your app before building iOS:
+> ```sh
+> flutter config --enable-swift-package-manager
+> ```
+
+> **Note:** The Android Drop-In `NavigationView` was removed in Navigation SDK v3. The turn-by-turn UI is now assembled from individual Mapbox components, so the on-screen UI may differ cosmetically from older versions of this plugin.
+
 ## IOS Configuration
 
 1. Go to your [Mapbox account dashboard](https://account.mapbox.com/) and create an access token that has the `DOWNLOADS:READ` scope. **PLEASE NOTE: This is not the same as your production Mapbox API token. Make sure to keep it private and do not insert it into any Info.plist file.** Create a file named `.netrc` in your home directory if it doesn’t already exist, then add the following lines to the end of the file:
@@ -62,7 +75,7 @@ After adding the above, your gradle.properties file may look something like this
 org.gradle.jvmargs=-Xmx1536M
 android.useAndroidX=true
 android.enableJetifier=true
-MAPBOX_DOWNLOADS_TOKEN=sk.epe9nE9peAcmwNzKVNqSbFfp2794YtnNepe9nE9peAcmwNzKVNqSbFfp2794YtnN.-HrbMMQmLdHwYb8r
+MAPBOX_DOWNLOADS_TOKEN=sk.XXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 4. Update `MainActivity.kt` to extends `FlutterFragmentActivity` vs `FlutterActivity`. Otherwise you'll get `Caused by: java.lang.IllegalStateException: Please ensure that the hosting Context is a valid ViewModelStoreOwner`.
@@ -74,7 +87,7 @@ class MainActivity: FlutterFragmentActivity() {
 }
 ```
 
-5. Add `implementation platform("org.jetbrains.kotlin:kotlin-bom:1.8.0")` to `android/app/build.gradle`
+5. Add `implementation platform("org.jetbrains.kotlin:kotlin-bom:1.9.24")` to `android/app/build.gradle`, and make sure your app uses `compileSdkVersion 34` (required by Maps SDK v11). On AGP 7.x, add `android.suppressUnsupportedCompileSdk=34` to `gradle.properties`.
 
 ## Usage
 
