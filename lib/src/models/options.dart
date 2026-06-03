@@ -1,3 +1,4 @@
+// Data model serialized over the platform channel.
 // ignore_for_file: public_member_api_docs
 
 import 'package:flutter/widgets.dart';
@@ -234,7 +235,7 @@ class MapBoxOptions {
 
     return newOptions.toMap()
       ..removeWhere(
-        (String key, dynamic value) => prevOptionsMap[key] == value,
+        (key, value) => prevOptionsMap[key] == value,
       );
   }
 }

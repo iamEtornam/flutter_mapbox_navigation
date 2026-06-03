@@ -1,3 +1,4 @@
+// Enum mirrors the native navigation modes; the values are self-explanatory.
 // ignore_for_file: public_member_api_docs
 
 ///Option to specify the mode of transportation.

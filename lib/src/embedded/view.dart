@@ -68,6 +68,8 @@ class MapBoxNavigationView extends StatelessWidget {
           )
             ..addOnPlatformViewCreatedListener(params.onPlatformViewCreated)
             ..addOnPlatformViewCreatedListener(_onPlatformViewCreated)
+            // Fire-and-forget (standard hybrid-composition pattern).
+            // ignore: discarded_futures
             ..create();
         },
       );

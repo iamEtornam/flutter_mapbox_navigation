@@ -68,7 +68,7 @@ class MethodChannelFlutterMapboxNavigation
 
     final pointList = _getPointListFromWayPoints(wayPoints);
     var i = 0;
-    final wayPointMap = {for (var e in pointList) i++: e};
+    final wayPointMap = {for (final e in pointList) i++: e};
 
     final args = options.toMap();
     args['wayPoints'] = wayPointMap;
@@ -85,7 +85,7 @@ class MethodChannelFlutterMapboxNavigation
     assert(wayPoints.isNotEmpty, 'Error: WayPoints must be at least 1');
     final pointList = _getPointListFromWayPoints(wayPoints);
     var i = 0;
-    final wayPointMap = {for (var e in pointList) i++: e};
+    final wayPointMap = {for (final e in pointList) i++: e};
     final args = <String, dynamic>{};
     args['wayPoints'] = wayPointMap;
     await methodChannel.invokeMethod('addWayPoints', args);
@@ -124,8 +124,10 @@ class MethodChannelFlutterMapboxNavigation
     if (_onRouteEvent != null) _onRouteEvent?.call(event);
     switch (event.eventType) {
       case MapBoxEvent.navigation_finished:
-        _routeEventSubscription.cancel();
+        unawaited(_routeEventSubscription.cancel());
         break;
+      // Only navigation_finished needs handling here; all other events are
+      // forwarded to the listener above and need no extra action.
       // ignore: no_default_cases
       default:
         break;

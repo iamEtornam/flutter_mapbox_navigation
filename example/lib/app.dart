@@ -332,7 +332,7 @@ class _SampleNavigationAppState extends State<SampleNavigationApp> {
     );
   }
 
-  Future<void> _onEmbeddedRouteEvent(e) async {
+  Future<void> _onEmbeddedRouteEvent(RouteEvent e) async {
     _distanceRemaining = await MapBoxNavigation.instance.getDistanceRemaining();
     _durationRemaining = await MapBoxNavigation.instance.getDurationRemaining();
 

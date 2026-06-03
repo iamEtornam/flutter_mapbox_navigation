@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
-import 'package:mapbox_navigation_plus/src/flutter_mapbox_navigation_method_channel.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mapbox_navigation_plus/src/flutter_mapbox_navigation_method_channel.dart';
 
 void main() {
   final platform = MethodChannelFlutterMapboxNavigation();
@@ -10,7 +10,7 @@ void main() {
 
   setUp(() {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-        .setMockMethodCallHandler(channel, (MethodCall methodCall) async {
+        .setMockMethodCallHandler(channel, (methodCall) async {
       return '42';
     });
   });

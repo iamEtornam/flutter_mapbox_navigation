@@ -1,3 +1,4 @@
+// Enum values use snake_case to match the native event-channel payload exactly.
 // ignore_for_file: constant_identifier_names, public_member_api_docs
 
 /// All possible events that could occur in the course of navigation

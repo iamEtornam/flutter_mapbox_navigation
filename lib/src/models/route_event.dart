@@ -13,11 +13,13 @@ class RouteEvent {
 
   /// Creates [RouteEvent] object from json
   RouteEvent.fromJson(Map<String, dynamic> json) {
-    try {
-      eventType = MapBoxEvent.values
-          .firstWhere((e) => e.toString().split('.').last == json['eventType']);
-    } catch (e) {
-      // TODO handle the error
+    // Match the event name without throwing on unknown values (eventType
+    // stays null for unsupported events).
+    for (final value in MapBoxEvent.values) {
+      if (value.toString().split('.').last == json['eventType']) {
+        eventType = value;
+        break;
+      }
     }
 
     final dataJson = json['data'];

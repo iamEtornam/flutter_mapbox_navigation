@@ -1,3 +1,4 @@
+// Data model serialized over the platform channel.
 // ignore_for_file: public_member_api_docs
 
 import 'package:mapbox_navigation_plus/src/helpers.dart';

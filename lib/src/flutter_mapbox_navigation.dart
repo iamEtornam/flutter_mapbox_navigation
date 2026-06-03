@@ -1,3 +1,4 @@
+// setDefaultOptions is a method, not a setter, by design.
 // ignore_for_file: use_setters_to_change_properties
 
 import 'dart:async';
