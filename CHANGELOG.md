@@ -1,4 +1,4 @@
-## 1.0.0
+## 0.0.1
 * **BREAKING:** Migrate to Mapbox Navigation SDK v3 (Android `com.mapbox.navigationcore:android` 3.23.x on Maps SDK v11; iOS `MapboxNavigationCore` + `MapboxNavigationUIKit` 3.24.x on MapboxMaps v11).
 * **BREAKING (iOS): requires Flutter Swift Package Manager.** Mapbox dropped CocoaPods support for the iOS Navigation SDK v3, so this plugin now ships as a Swift Package. Consuming apps must enable it once: `flutter config --enable-swift-package-manager`. Minimum deployment target is iOS 14.0; requires Xcode 15+ / Swift 5.9+.
 * **BREAKING (Android):** Toolchain bumped to AGP 8.6, Gradle 8.7, Kotlin 1.9, JDK 17, `compileSdk`/`targetSdk` 34, NDK 23. The example's Android project was migrated to the declarative Flutter Gradle plugins DSL. The Mapbox access token is now read from `R.string.mapbox_access_token` / `MapboxOptions` (the `accessToken` builder option was removed in v3).
@@ -7,7 +7,7 @@
 * **Fix (iOS):** the full-screen / embedded navigation controllers were presented via `UIApplication.shared.delegate?.window??.rootViewController`, which is nil (and crashed) on scene-based iOS. Now resolves the top view controller from the active window scene.
 * The Dart API (`MapBoxNavigation`, `MapBoxNavigationView`, options, and route events) is unchanged.
 * iOS simulation note: `simulateRoute` is honored from the first navigation of an app session (v3 fixes the location source when the navigation provider is created).
-* Android 16 KB page-size note: the default `com.mapbox.navigationcore:android` artifact's native libs are not 16 KB-aligned and run in compatibility mode on 16 KB-page devices. Apps targeting those devices should switch to the `…:android-ndk27` artifacts.
+* Android 16 KB page-size support: uses the `com.mapbox.navigationcore:*-ndk27` artifacts so all native libraries are 16 KB-aligned (required for Android 15+ devices that use 16 KB memory pages).
 
 This release was smoke-tested on an iOS 26 simulator and an Android 17 (API 37) emulator: full-screen turn-by-turn, embedded route preview with alternatives, and route simulation all render correctly on both platforms.
 
