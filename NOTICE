@@ -1,0 +1,22 @@
+flutter_mapbox_navigation
+
+Copyright 2026 Bright Etornam Sunu
+
+This product includes software originally developed by Emmanuel Oche
+("eopeter") as the flutter_mapbox_navigation project
+(https://github.com/eopeter/flutter_mapbox_navigation), Copyright 2020
+Emmanuel Oche, licensed under the Apache License, Version 2.0.
+
+Portions of this software have been substantially modified by
+Bright Etornam Sunu, including a migration to the Mapbox Navigation SDK v3
+for Android and iOS.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
