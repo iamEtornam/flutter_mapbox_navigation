@@ -1,8 +1,8 @@
 // ignore_for_file: public_member_api_docs
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter_mapbox_navigation/src/models/navmode.dart';
-import 'package:flutter_mapbox_navigation/src/models/voice_units.dart';
+import 'package:mapbox_navigation_plus/src/models/navmode.dart';
+import 'package:mapbox_navigation_plus/src/models/voice_units.dart';
 
 /// Configuration options for the MapBoxNavigation.
 ///

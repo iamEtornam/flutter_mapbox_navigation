@@ -1,9 +1,9 @@
 #
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
-# Run `pod lib lint flutter_mapbox_navigation.podspec` to validate before publishing.
+# Run `pod lib lint mapbox_navigation_plus.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'flutter_mapbox_navigation'
+  s.name             = 'mapbox_navigation_plus'
   s.version          = '0.0.1'
   s.summary          = 'Add Turn By Turn Navigation to Your Flutter Application Using MapBox. Never leave your app when you need to navigate your users to a location.'
   s.description      = <<-DESC
@@ -13,7 +13,7 @@ Add Turn By Turn Navigation to Your Flutter Application Using MapBox. Never leav
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Emmanuel Peter Oche' => 'eopeter@gmail.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'flutter_mapbox_navigation/Sources/flutter_mapbox_navigation/**/*'
+  s.source_files = 'mapbox_navigation_plus/Sources/mapbox_navigation_plus/**/*'
   s.dependency 'Flutter'
   s.platform = :ios, '14.0'
 

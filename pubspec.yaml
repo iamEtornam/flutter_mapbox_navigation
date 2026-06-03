@@ -1,4 +1,4 @@
-name: flutter_mapbox_navigation
+name: mapbox_navigation_plus
 description: >
   Add Turn By Turn Navigation to Your Flutter Application Using MapBox. 
   Never leave your app when you need to navigate your users to a location.

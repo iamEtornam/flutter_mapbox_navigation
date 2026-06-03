@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs
 
-import 'package:flutter_mapbox_navigation/src/helpers.dart';
-import 'package:flutter_mapbox_navigation/src/models/route_leg.dart';
+import 'package:mapbox_navigation_plus/src/helpers.dart';
+import 'package:mapbox_navigation_plus/src/models/route_leg.dart';
 
 ///This class contains all progress information at any given time
 ///during a navigation session. This progress includes information for the

@@ -7,7 +7,7 @@
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html show window;
 
-import 'package:flutter_mapbox_navigation/src/flutter_mapbox_navigation_platform_interface.dart';
+import 'package:mapbox_navigation_plus/src/flutter_mapbox_navigation_platform_interface.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 /// A web implementation of the FlutterMapboxNavigationPlatform of the

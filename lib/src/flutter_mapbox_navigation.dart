@@ -4,8 +4,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_mapbox_navigation/src/flutter_mapbox_navigation_platform_interface.dart';
-import 'package:flutter_mapbox_navigation/src/models/models.dart';
+import 'package:mapbox_navigation_plus/src/flutter_mapbox_navigation_platform_interface.dart';
+import 'package:mapbox_navigation_plus/src/models/models.dart';
 
 /// Turn-By-Turn Navigation Provider
 class MapBoxNavigation {

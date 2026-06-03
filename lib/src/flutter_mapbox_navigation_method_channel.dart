@@ -5,8 +5,8 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_mapbox_navigation/src/flutter_mapbox_navigation_platform_interface.dart';
-import 'package:flutter_mapbox_navigation/src/models/models.dart';
+import 'package:mapbox_navigation_plus/src/flutter_mapbox_navigation_platform_interface.dart';
+import 'package:mapbox_navigation_plus/src/models/models.dart';
 
 /// An implementation of [FlutterMapboxNavigationPlatform]
 /// that uses method channels.

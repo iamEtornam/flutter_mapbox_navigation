@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_mapbox_navigation/src/flutter_mapbox_navigation_method_channel.dart';
-import 'package:flutter_mapbox_navigation/src/models/models.dart';
+import 'package:mapbox_navigation_plus/src/flutter_mapbox_navigation_method_channel.dart';
+import 'package:mapbox_navigation_plus/src/models/models.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 /// FlutterMapboxNavigationPlatform abstract class
