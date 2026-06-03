@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:mapbox_navigation_plus/mapbox_navigation_plus.dart';
+import 'package:mapbox_navigation_sdk/mapbox_navigation_sdk.dart';
 
 /// Represents an event sent by the navigation service
 class RouteEvent {

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mapbox_navigation_plus/mapbox_navigation_plus.dart';
+import 'package:mapbox_navigation_sdk/mapbox_navigation_sdk.dart';
 
 class SampleNavigationApp extends StatefulWidget {
   const SampleNavigationApp({super.key});

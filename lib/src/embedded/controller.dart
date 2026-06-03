@@ -4,7 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mapbox_navigation_plus/src/models/models.dart';
+import 'package:mapbox_navigation_sdk/src/models/models.dart';
 
 /// Controller for a single MapBox Navigation instance
 /// running on the host platform.

@@ -1,6 +1,6 @@
 [![Pub][pub_badge]][pub] [![License: Apache 2.0][license_badge]][license]
 
-# mapbox_navigation_plus
+# mapbox_navigation_sdk
 
 Add Turn By Turn Navigation to Your Flutter Application Using MapBox. Never leave your app when you need to navigate your users to a location.
 
@@ -252,7 +252,7 @@ Originally created by Emmanuel Oche (Copyright 2020); the Mapbox Navigation SDK 
 migration and ongoing maintenance are by Bright Etornam Sunu (Copyright 2026).
 
 <!-- Links -->
-[pub_badge]: https://img.shields.io/pub/v/mapbox_navigation_plus.svg
-[pub]: https://pub.dev/packages/mapbox_navigation_plus
+[pub_badge]: https://img.shields.io/pub/v/mapbox_navigation_sdk.svg
+[pub]: https://pub.dev/packages/mapbox_navigation_sdk
 [license_badge]: https://img.shields.io/badge/license-Apache%202.0-blue.svg
 [license]: https://github.com/iamEtornam/flutter_mapbox_navigation/blob/master/LICENSE

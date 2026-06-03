@@ -1,8 +1,8 @@
 // Data model serialized over the platform channel.
 // ignore_for_file: public_member_api_docs
 
-import 'package:mapbox_navigation_plus/src/helpers.dart';
-import 'package:mapbox_navigation_plus/src/models/route_leg.dart';
+import 'package:mapbox_navigation_sdk/src/helpers.dart';
+import 'package:mapbox_navigation_sdk/src/models/route_leg.dart';
 
 ///This class contains all progress information at any given time
 ///during a navigation session. This progress includes information for the

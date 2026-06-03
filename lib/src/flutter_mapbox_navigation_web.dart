@@ -5,7 +5,7 @@
 import 'dart:html' as html show window;
 
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
-import 'package:mapbox_navigation_plus/src/flutter_mapbox_navigation_platform_interface.dart';
+import 'package:mapbox_navigation_sdk/src/flutter_mapbox_navigation_platform_interface.dart';
 
 /// A web implementation of the FlutterMapboxNavigationPlatform of the
 /// FlutterMapboxNavigation plugin.

@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mapbox_navigation_plus/mapbox_navigation_plus.dart';
-import 'package:mapbox_navigation_plus/src/flutter_mapbox_navigation_method_channel.dart';
-import 'package:mapbox_navigation_plus/src/flutter_mapbox_navigation_platform_interface.dart';
+import 'package:mapbox_navigation_sdk/mapbox_navigation_sdk.dart';
+import 'package:mapbox_navigation_sdk/src/flutter_mapbox_navigation_method_channel.dart';
+import 'package:mapbox_navigation_sdk/src/flutter_mapbox_navigation_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockFlutterMapboxNavigationPlatform

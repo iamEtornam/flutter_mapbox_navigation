@@ -1,9 +1,9 @@
 // Data model serialized over the platform channel.
 // ignore_for_file: public_member_api_docs
 
-import 'package:mapbox_navigation_plus/src/helpers.dart';
-import 'package:mapbox_navigation_plus/src/models/route_step.dart';
-import 'package:mapbox_navigation_plus/src/models/way_point.dart';
+import 'package:mapbox_navigation_sdk/src/helpers.dart';
+import 'package:mapbox_navigation_sdk/src/models/route_step.dart';
+import 'package:mapbox_navigation_sdk/src/models/way_point.dart';
 
 ///A RouteLeg object defines a single leg of a route between two waypoints.
 ///If the overall route has only two waypoints, it has a single

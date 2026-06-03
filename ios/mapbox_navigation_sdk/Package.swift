@@ -5,12 +5,12 @@ import PackageDescription
 // Swift Package Manager, so consuming apps must enable Flutter's Swift Package
 // Manager support (`flutter config --enable-swift-package-manager`).
 let package = Package(
-    name: "mapbox_navigation_plus",
+    name: "mapbox_navigation_sdk",
     platforms: [
         .iOS("14.0")
     ],
     products: [
-        .library(name: "mapbox-navigation-plus", targets: ["mapbox_navigation_plus"])
+        .library(name: "mapbox-navigation-sdk", targets: ["mapbox_navigation_sdk"])
     ],
     dependencies: [
         .package(name: "FlutterFramework", path: "../FlutterFramework"),
@@ -19,7 +19,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "mapbox_navigation_plus",
+            name: "mapbox_navigation_sdk",
             dependencies: [
                 .product(name: "FlutterFramework", package: "FlutterFramework"),
                 .product(name: "MapboxNavigationCore", package: "mapbox-navigation-ios"),
